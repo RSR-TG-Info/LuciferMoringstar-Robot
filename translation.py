@@ -1,4 +1,4 @@
-class Script(object):
+class translation(object):
     START_TXT = """<b>Hello 👋 {},</b>
 
 <b>I Am Not Only <a href="https://t.me/MovieHub_Robot">Movie Hub Bot</a> To Assist You But Also Employed At <a href="https://t.me/+Rw47iXFdBF84YTNl">Movie Hub</a> Group By <a href="https://t.me/hellodragan">Dragon</a> So You Can't Get My Service By Adding Me To Your Group So Don't Waste Your Time & Data</b> 😉
