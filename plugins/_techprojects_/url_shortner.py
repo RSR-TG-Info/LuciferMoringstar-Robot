@@ -28,6 +28,8 @@ GPLINKS_API = os.environ.get("GPLINKS_API", "008ccaedd6061ad1948838f410947603de9
 reply_markup = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton(text='join projects channel', url='https://t.me/+_WHSevvhmgIyMjY1')
+        ]]
+    )
 @Client.on_inline_query(filters.regex(r'https?://[^\s]+'))
 async def inline_short(bot, update):
     link = update.matches[0].group(0),
@@ -172,7 +174,7 @@ async def short(link):
     
     # Send the text
     try:
-        shorten_urls += "\n\nmade by @josprojects | @jospsupport 🔥"
+        shorten_urls += "\n\nmade by @hellodragan"
         return shorten_urls
     except Exception as error:
         return error
