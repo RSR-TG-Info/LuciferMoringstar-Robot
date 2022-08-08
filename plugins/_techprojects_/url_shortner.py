@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (C) @ZauteKm
+# Copyright (C) @hellodragan 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -27,25 +27,7 @@ GPLINKS_API = os.environ.get("GPLINKS_API", "008ccaedd6061ad1948838f410947603de9
 
 reply_markup = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton(text='join projects channel', url='https://telegram.me/josprojects')
-        ]]
-    )
-
-@Client.on_message(filters.command(["short"]) & filters.regex(r'https?://[^\s]+'))
-async def reply_shortens(bot, update):
-    message = await update.reply_text(
-        text="`Analysing your link...`",
-        disable_web_page_preview=True,
-        quote=True
-    )
-    link = update.matches[0].group(0)
-    shorten_urls = await short(link)
-    await message.edit_text(
-        text=shorten_urls,
-        reply_markup=reply_markup,
-        disable_web_page_preview=True
-    )
-
+        InlineKeyboardButton(text='join projects channel', url='https://t.me/+_WHSevvhmgIyMjY1')
 @Client.on_inline_query(filters.regex(r'https?://[^\s]+'))
 async def inline_short(bot, update):
     link = update.matches[0].group(0),
