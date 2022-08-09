@@ -1231,7 +1231,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>↪️ Requested: </b>{search}\n<b>📤 Uploaded To: </b>Movie Hub Server\n<b>🧑‍🔧 Get Support </b>✔️ <b><a href="https://t.me/hellodragan">TG Dragon</a></b>\n\n📌 Press The Down Buttons To Access The File\n<s>📌 This Post Will Be Deleted After 10 Minutes</s>"
+        cap = f"<b>🎬 Title:</b> {search}\n\n<b>👥 Requested by: {message.from_user.mention}</b>\n<b>© Powered By: <a href='https://t.me/+Rw47iXFdBF84YTNl'>{message.chat.title}</a></b>\n\n<b>✍️ Note:</b> <s>This message will be Auto-deleted after 10 minutes to avoid copyright issues.</s>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024], reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
