@@ -50,7 +50,8 @@ async def start(client, message):
             ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_chat_action("Typing")
-        m=await message.reply_sticker("CAACAgUAAxkBAAEFgtBi8kasH1iGveTT-HI1ccUbk99fOQACFQEAAsiUZBRmRDCipxVsEykE CAACAgUAAxkBAAEFgzxi8nst3-JNMI8lpeiEGoiX8ZuNnQACkgQAAkOCMFZOKrTnrmt1EikE") 
+        m=await message.reply_sticker("CAACAgUAAxkBAAEFgtBi8kasH1iGveTT-HI1ccUbk99fOQACFQEAAsiUZBRmRDCipxVsEykE") 
+        m=await message.reply_sticker("CAACAgUAAxkBAAEFgzxi8nst3-JNMI8lpeiEGoiX8ZuNnQACkgQAAkOCMFZOKrTnrmt1EikE")
         await asyncio.sleep(1)
         await m.delete()        
         await message.reply_photo(
@@ -95,7 +96,8 @@ async def start(client, message):
             ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_chat_action("Typing")
-        m=await message.reply_sticker("CAACAgUAAxkBAAEFgtBi8kasH1iGveTT-HI1ccUbk99fOQACFQEAAsiUZBRmRDCipxVsEykE CAACAgUAAxkBAAEFgzxi8nst3-JNMI8lpeiEGoiX8ZuNnQACkgQAAkOCMFZOKrTnrmt1EikE") 
+        m=await message.reply_sticker("CAACAgUAAxkBAAEFgtBi8kasH1iGveTT-HI1ccUbk99fOQACFQEAAsiUZBRmRDCipxVsEykE") 
+        m=await message.reply_sticker("CAACAgUAAxkBAAEFgzxi8nst3-JNMI8lpeiEGoiX8ZuNnQACkgQAAkOCMFZOKrTnrmt1EikE") 
         await asyncio.sleep(1)
         await m.delete()        
         await message.reply_photo(
