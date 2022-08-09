@@ -491,6 +491,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('❎ Close', callback_data='close_data'),
          ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
         await query.message.edit_text(
             text="▣ ▢ ▢"
         )
@@ -499,8 +500,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
         await query.message.edit_text(
             text="▣ ▣ ▣"
-        )     
-        await query.message.edit_text(  
+        )       
+        await query.message.edit_text(
             text=LuciferMoringstar.HELP_TXT.format(query.from_user.mention),
             reply_markup=reply_markup,
             parse_mode='html'
@@ -513,6 +514,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('Close ❎', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
         await query.message.edit_text(
             text="▣ ▢ ▢"
         )
@@ -534,6 +536,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('Close ❎', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.TORRENT_TXT,
             disable_web_page_preview=True,
@@ -545,6 +557,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.SOURCE_TXT,
             disable_web_page_preview=True,
@@ -559,6 +581,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='auto_manual'),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
         await query.message.edit_text(
             text="▣ ▢ ▢"
         )
@@ -568,7 +591,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text="▣ ▣ ▣"
         )       
-        await query.message.edit_text(      
+        await query.message.edit_text(
             text=LuciferMoringstar.MANUALFILTER_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
@@ -579,6 +602,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='manualfilter')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.BUTTON_TXT,
             disable_web_page_preview=True,
@@ -590,6 +623,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='auto_manual')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.AUTOFILTER_TXT,
             disable_web_page_preview=True,
@@ -605,6 +648,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('Close ❎', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
         await query.message.edit_text(
             text="▣ ▢ ▢"
         )
@@ -625,6 +669,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.CONNECTION_TXT,
             disable_web_page_preview=True,
@@ -637,6 +691,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('Close ❎', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.PASTE_TXT,
             disable_web_page_preview=True,
@@ -648,6 +712,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.TGRAPH_TXT,
             disable_web_page_preview=True,
@@ -659,6 +733,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.INFO_TXT,
             disable_web_page_preview=True,
@@ -670,6 +754,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.SEARCH_TXT,
             disable_web_page_preview=True,
@@ -681,6 +775,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='help'),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.GTRANS_TXT,
             disable_web_page_preview=True,
@@ -692,6 +796,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.ADMIN_TXT,
             disable_web_page_preview=True,
@@ -703,6 +817,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.ZOMBIES_TXT,
             disable_web_page_preview=True,
@@ -714,6 +838,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.PURGE_TXT,
             disable_web_page_preview=True,
@@ -725,6 +859,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.RESTRIC_TXT,
             disable_web_page_preview=True,
@@ -736,6 +880,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.MEMES_TXT,
             disable_web_page_preview=True,
@@ -747,6 +901,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.URL_SHORTNER_TXT,
             disable_web_page_preview=True,
@@ -758,6 +922,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.TTS_TXT,
             disable_web_page_preview=True,
@@ -769,6 +943,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.PIN_MESSAGE_TXT,
             disable_web_page_preview=True,
@@ -780,6 +964,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.MUSIC_TXT,
             disable_web_page_preview=True,
@@ -791,6 +985,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.PASSWORD_GEN_TXT,
             disable_web_page_preview=True,
@@ -802,6 +1006,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.SHARE_TXT,
             disable_web_page_preview=True,
@@ -813,6 +1027,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔙 Back', callback_data='manualfilter')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.FILLINGS_TXT,
             disable_web_page_preview=True,
@@ -832,6 +1056,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
         free = 536870912 - monsize
         monsize = get_size(monsize)
         free = get_size(free)
+        await message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
         await query.message.edit_text(
             text=LuciferMoringstar.STATUS_TXT.format(total, users, chats, monsize, free),
             reply_markup=reply_markup,
