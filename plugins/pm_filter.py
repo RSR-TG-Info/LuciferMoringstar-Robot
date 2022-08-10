@@ -97,15 +97,21 @@ async def next_page(bot, query):
     if n_offset == 0:
         btn.append(
             [InlineKeyboardButton("🔙", callback_data=f"next_{req}_{key}_{off_set}"),
-             InlineKeyboardButton(text=f"Check PM!", url=f"https://t.me/{temp.U_NAME}"),
+             InlineKeyboardButton(text="🤖 CHECK MY PM 🤖", url=f"https://t.me/{temp.U_NAME}"),
              InlineKeyboardButton(f"📃 {round(int(offset) / 10) + 1} / {round(total / 10)}",
                                   callback_data="pages")]
         )
     elif off_set is None:
         btn.append(
-            [InlineKeyboardButton(f"🗓 {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
-             InlineKeyboardButton(text=f"Check PM!", url=f"https://t.me/{temp.U_NAME}"),
-             InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")])
+            [InlineKeyboardButton(text="NEXT ⏩", callback_data=f"next_{req}_{key}_{offset}")]
+        )    
+        btn.append(
+            [InlineKeyboardButton(text=f"🗓 1/{round(int(total_results) / 10)}", callback_data="pages"),
+             InlineKeyboardButton("Close 🗑️", callback_data="close")]
+        )
+        btn.append(
+                [InlineKeyboardButton(text="🤖 CHECK MY PM 🤖", url=f"https://t.me/{temp.U_NAME}")]
+            )
     else:
         btn.append(
             [
@@ -505,14 +511,30 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-    await query.data == "about"
-    await query.message.edit_text[(
-            text==LuciferMoringstar.ABOUT_TXT.format(temp.B_NAME),
-            await query.answer(),
-            disable_web_page_preview==True,
-            reply_markup==reply_markup,
-            parse_mode=='html'
-        )]
+    elif query.data == "about"
+    buttons = [[
+            InlineKeyboardButton('🤖 Status', url='https://t.me/+z2h0W6QBubZlNWU9'),
+            ],[
+            InlineKeyboardButton('🔙 Back', callback_data='start'),
+            InlineKeyboardButton('Close ❎', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_chat_action("Typing")
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )       
+        await query.message.edit_text(
+            text=Script.ABOUT_TXT.format(temp.B_NAME),
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
     elif query.data == "torrent":
         buttons = [[
             InlineKeyboardButton('🏠 Home', callback_data='help'),
@@ -1161,22 +1183,29 @@ async def auto_filter(client, msg, spoll=False):
         BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
         btn.append(
+            [InlineKeyboardButton(text="NEXT ⏩", callback_data=f"next_{req}_{key}_{offset}")]
+        )    
+        btn.append(
             [InlineKeyboardButton(text=f"🗓 1/{round(int(total_results) / 10)}", callback_data="pages"),
-             InlineKeyboardButton(text="Check PM", url=f"https://t.me/{temp.U_NAME}"),
-             InlineKeyboardButton(text="NEXT ⏩", callback_data=f"next_{req}_{key}_{offset}")]
+             InlineKeyboardButton("Close 🗑️", callback_data="close")]
         )
+        btn.append(
+                [InlineKeyboardButton(text="🤖 CHECK MY PM 🤖", url=f"https://t.me/{temp.U_NAME}")]
+            )
     else:
         btn.append(
-            [InlineKeyboardButton(text="🗓 1/1", callback_data="pages"),
-             InlineKeyboardButton(text="Check PM", url=f"https://t.me/{temp.U_NAME}")]
+            [InlineKeyboardButton(text="text=f"🗓 1/{round(int(total_results) / 10)}", callback_data="pages"),
+             InlineKeyboardButton("Close 🗑️", callback_data="close")]
         )
-
+        btn.append(
+                [InlineKeyboardButton(text="🤖 CHECK MY PM 🤖", url=f"https://t.me/{temp.U_NAME}")]
+            )
     btn.insert(0, [
         InlineKeyboardButton("🎬 Movie", url="https://t.me/+8X7kGPo_fogzYTRl"),
         InlineKeyboardButton("Series 🎥", url="https://t.me/+Rw47iXFdBF84YTNl")
     ])
     btn.insert(0, [
-        InlineKeyboardButton("🔔 Join Our Channel 🔔",url="https://t.me/+5YhAQB1IGNNmNDI9")
+        InlineKeyboardButton("🔔 Join Our Channel 🔔",url="https://t.me/+z2h0W6QBubZlNWU9")
     ])
     reply_id = message.reply_to_message.message_id if message.reply_to_message else message.message_id
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
