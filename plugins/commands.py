@@ -61,9 +61,7 @@ async def start(client, message):
             parse_mode='html'
         )
         return
-    if AUTH_CHANNEL and not await is_subscribed(client, message):
-        try:
-            if message.command[1] != "subscribe":
+     if message.command[1] != "subscribe":
         AUTH=["https://telegra.ph/file/b2acb2586995d0e107760.jpg"]
         invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
         button=[[
