@@ -45,7 +45,7 @@ async def next_page(bot, query):
         pass
     elif int(req) not in [query.from_user.id, 0]:
         return await query.answer(
-            "All right, but this is not yours.;\nNice Try! But, This Was Not Your Request, Request Yourself;",
+            "Hello {message.from_user.mention} This Is Not Your Message 😔\n\n{search.from_user.mention} Only Can Use This ☑️\n\nRequest Your Own ✍\n\n © MOVIE CLUB",
             show_alert=True)
     try:
         offset = int(offset)
