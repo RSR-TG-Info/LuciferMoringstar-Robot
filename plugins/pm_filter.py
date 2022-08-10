@@ -107,10 +107,10 @@ async def next_page(bot, query):
         )    
         btn.append(
             [InlineKeyboardButton(text=f"🗓 1/{round(int(total_results) / 10)}", callback_data="pages"),
-             InlineKeyboardButton("Close 🗑️", callback_data="close")]
+             InlineKeyboardButton("Close 🗑️", callback_data="close_data")]
         )
         btn.append(
-                [InlineKeyboardButton(text="🤖 CHECK MY PM 🤖", url=f"https://t.me/{temp.U_NAME}")]
+                [InlineKeyboardButton(text="🤖 Check Bot PM 🤖", url=f"https://t.me/{temp.U_NAME}")]
             )
     else:
         btn.append(
@@ -119,14 +119,11 @@ async def next_page(bot, query):
                 InlineKeyboardButton(f"🗓 {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
                 InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")]
             )
-    btn.insert(0,
-            [
-                InlineKeyboardButton("🎬 Movie", url="https://t.me/+8X7kGPo_fogzYTRl"),
-                InlineKeyboardButton("Series 🎥", url="https://t.me/+Rw47iXFdBF84YTNl")
-            ])
-
     btn.insert(0, [
-        InlineKeyboardButton("Check PM", url=f"https://t.me/{temp.U_NAME}")
+        InlineKeyboardButton("ミ★ MOVIE CLUB ★彡",url="https://t.me/+ZLfYBUbS-adiY2E1")
+    ])
+    btn.insert(0, [
+        InlineKeyboardButton("🤖 Check Bot PM 🤖", url=f"https://t.me/{temp.U_NAME}")
     ])
     try:
         await query.edit_message_reply_markup(
@@ -1187,25 +1184,21 @@ async def auto_filter(client, msg, spoll=False):
         )    
         btn.append(
             [InlineKeyboardButton(text=f"🗓 1/{round(int(total_results) / 10)}", callback_data="pages"),
-             InlineKeyboardButton("Close 🗑️", callback_data="close")]
+             InlineKeyboardButton("Close 🗑️", callback_data="close_data")]
         )
         btn.append(
-                [InlineKeyboardButton(text="🤖 CHECK MY PM 🤖", url=f"https://t.me/{temp.U_NAME}")]
+                [InlineKeyboardButton(text="🤖 Check Bot PM 🤖", url=f"https://t.me/{temp.U_NAME}")]
             )
     else:
         btn.append(
             [InlineKeyboardButton(text=f"🗓 1/{round(int(total_results) / 10)}", callback_data="pages"),
-             InlineKeyboardButton("Close 🗑️", callback_data="close")]
+             InlineKeyboardButton("Close 🗑️", callback_data="close_data")]
         )
         btn.append(
-                [InlineKeyboardButton(text="🤖 CHECK MY PM 🤖", url=f"https://t.me/{temp.U_NAME}")]
+                [InlineKeyboardButton(text="🤖 Check Bot PM 🤖", url=f"https://t.me/{temp.U_NAME}")]
             )
     btn.insert(0, [
-        InlineKeyboardButton("🎬 Movie", url="https://t.me/+8X7kGPo_fogzYTRl"),
-        InlineKeyboardButton("Series 🎥", url="https://t.me/+Rw47iXFdBF84YTNl")
-    ])
-    btn.insert(0, [
-        InlineKeyboardButton("🔔 Join Our Channel 🔔",url="https://t.me/+z2h0W6QBubZlNWU9")
+        InlineKeyboardButton("ミ★ MOVIE CLUB ★彡",url="https://t.me/+ZLfYBUbS-adiY2E1")
     ])
     reply_id = message.reply_to_message.message_id if message.reply_to_message else message.message_id
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
