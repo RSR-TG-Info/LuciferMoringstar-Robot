@@ -507,7 +507,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
         await query.message.reply_chat_action("Typing")
         await query.answer('Check PM, I have sent files in pm', show_alert=True)
-        elif query.data == "about":
+        elif query.data == 'about':
         await query.answer()
         
     elif query.data == "torrent":
