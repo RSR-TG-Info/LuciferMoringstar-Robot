@@ -506,7 +506,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "about":
-    await query.answer.edit_text(
+    reply_markup = InlineKeyboardMarkup(buttons)
+    await query.message.edit_text(
             text=LuciferMoringstar.ABOUT_TXT.format(temp.B_NAME),
             await query.answer()
             disable_web_page_preview=True,
