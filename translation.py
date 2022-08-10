@@ -1,15 +1,15 @@
 class LuciferMoringstar(object):
-    START_TXT = """<b>Hello 👋 {},</b>
+    START_TXT = """<i><b>Hello 👋 {},</i></b>
 
 <i><b>I Am Not Only <a href="https://t.me/Movieclub_Robot">Movie Club Bot</a> To Assist You But Also Employed At <a href="https://t.me/+iVePgxkxvQ0yOTBl">Movie Club</a> Group By <a href="https://t.me/hellodragan">Dragon</a> So You Can't Get My Service By Adding Me To Your Group So Don't Waste Your Time & Data</i></b> 😉
 
-<b>Better You Click Below & Join <a href="https://t.me/+iVePgxkxvQ0yOTBl">Movie Club</a> & Feel The Experience Of Downloading Unlimited Movies/Series</b> ✅
+<i><b>Better You Click Below & Join <a href="https://t.me/+iVePgxkxvQ0yOTBl">Movie Club</a> & Feel The Experience Of Downloading Unlimited Movies/Series</i></b> ✅
 
-<b>For More Information Click ℹ️ Help</b>"""
+<i><b>For More Information Click ℹ️ Help</i></b>"""
     
-    HELP_TXT = """<b>Hello 👋 {},</b>
+    HELP_TXT = """<i><b>Hello 👋 {},</i></b>
 
-<b>I can Guide You Through All Of <a href="https://t.me/MovieHub_Robot">Movie Hub Bot</a>'s Cool Features & How To Properly Use Them. Use The Buttons Below To Navigate Through All Of The Modules.</b>"""
+<i><b>I can Guide You Through All Of <a href="https://t.me/MovieHub_Robot">Movie Hub Bot</a>'s Cool Features & How To Properly Use Them. Use The Buttons Below To Navigate Through All Of The Modules.</i></b>"""
 
     ABOUT_TXT = """<b>➥ My name: {}
 ➥ Creator: <a href='https://t.me/hellodragan'>Dragon</a>
