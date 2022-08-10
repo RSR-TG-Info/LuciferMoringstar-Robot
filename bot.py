@@ -17,7 +17,6 @@ class LuciferMoringstar(Client):
 
     def __init__(self):
         super().__init__(
-            "LuciferMoringstar-Robot",
             session_name=SESSION,
             api_id=API_ID,
             api_hash=API_HASH,
