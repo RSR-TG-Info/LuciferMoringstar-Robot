@@ -505,11 +505,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-        await query.message.edit_text(
-        await query.message.reply_chat_action("Typing")
-        return await query.answer('Check PM')
     elif query.data == "about":
-        await query.answer()
+    await query.answer.edit_text(
+            text=LuciferMoringstar.ABOUT_TXT.format(temp.B_NAME),
+            await query.answer()
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
         )
     elif query.data == "torrent":
         buttons = [[
