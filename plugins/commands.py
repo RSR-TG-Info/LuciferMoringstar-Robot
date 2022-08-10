@@ -67,12 +67,12 @@ async def start(client, message):
         AUTH=["https://telegra.ph/file/b2acb2586995d0e107760.jpg"]
         invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
         button=[[
-         InlineKeyboardButton("🔔 SUBSCRIBE 🔔", url=invite_link.invite_link)
+         InlineKeyboardButton("🔔 MOVIE CLUB UPDATES 🔔", url=invite_link.invite_link)
          ]]
         reply_markup = InlineKeyboardMarkup(button)
         await message.reply_photo(
             photo=choice(AUTH),
-            caption=f"""<i><b>Hello {message.from_user.mention}. \nYou Have <a href="{invite_link.invite_link}">Not Subscribed</a> To <a href="{invite_link.invite_link}">My Update Channel</a>.So you do not get the Files on Inline Mode, Bot Pm and Group</i></b>""",
+            caption=f"""<i><b>👋 Hello {message.from_user.mention},\n\nYou Have <a href="{invite_link.invite_link}">Not Subscribed</a> To <a href="{invite_link.invite_link}">My Updates Channel</a>. To View The File, Click On 📣 MOVIE CLUB UPDATES 📣 Button & Join.</i></b>""",
             reply_markup=reply_markup
             )
         return
