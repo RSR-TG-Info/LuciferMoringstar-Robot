@@ -530,7 +530,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text="▣ ▣ ▣"
         )       
         await query.message.edit_text(
-            text=Script.ABOUT_TXT.format(temp.B_NAME),
+            text=LuciferMoringstar.ABOUT_TXT.format(temp.B_NAME),
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
