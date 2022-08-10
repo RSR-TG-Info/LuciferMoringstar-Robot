@@ -83,10 +83,10 @@ async def start(client, message):
         await client.send_message[(
             chat_id==message.from_user.id,
             text==LuciferMoringstar.FORCESUB_TXT,
-            reply_markup=InlineKeyboardMarkup(btn),
+            reply_markup==InlineKeyboardMarkup(btn),
             await message.reply_photo[(
-            photo=choice(AUTH),
-            parse_mode="markdown"
+            photo==choice(AUTH),
+            parse_mode=="markdown"
                 )
             ]
         )]
