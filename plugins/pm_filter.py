@@ -505,7 +505,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-    if query.data == "about":
+    await query.data == "about":
     reply_markup = InlineKeyboardMarkup(buttons)
     await query.message.edit_text(
             text=LuciferMoringstar.ABOUT_TXT.format(temp.B_NAME),
