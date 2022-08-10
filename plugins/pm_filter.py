@@ -508,7 +508,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     await query.data == "about"
     await query.message.edit_text(
             text=LuciferMoringstar.ABOUT_TXT.format(temp.B_NAME),
-            await query.answer()
+            await query.answer(),
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
