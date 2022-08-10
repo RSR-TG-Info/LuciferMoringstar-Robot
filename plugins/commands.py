@@ -87,7 +87,8 @@ async def start(client, message):
             await message.reply_photo(
             photo=choice(AUTH),
             parse_mode="markdown"
-            ))
+            )
+         )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
