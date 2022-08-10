@@ -505,11 +505,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
+        await query.message.edit_text(
         await query.message.reply_chat_action("Typing")
-        await query.answer('Check PM, I have sent files in pm', show_alert=True)
-        elif query.data == 'about':
+        return await query.answer('Check PM')
+    elif query.data == "about":
         await query.answer()
-        
+        )
     elif query.data == "torrent":
         buttons = [[
             InlineKeyboardButton('🏠 Home', callback_data='help'),
