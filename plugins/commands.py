@@ -32,7 +32,7 @@ async def start(client, message):
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.send_sticker(chat_id=message.chat.id, sticker='CAACAgUAAxkBAAEFYiZi4AHVMzQipl_wSOzrjcL3OSsAAZgAAiIGAALh0AFXn97xeMer_zEpBA', reply_markup=reply_markup, reply_to_message_id=message.message_id)
-        await asyncio.sleep(1000)
+        await asyncio.sleep(10)
         if not await db.get_chat(message.chat.id):
             total=await client.get_chat_members_count(message.chat.id)
             await client.send_message(LOG_CHANNEL, Script.LOG_TEXT_G.format(message.chat.title, message.chat.id, total, "Unknown"))       
@@ -43,7 +43,7 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, Script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('🔗 Movie Hub', url=f'https://t.me/+Rw47iXFdBF84YTNl')
+            InlineKeyboardButton('🔗 Movie Club', url=f'https://t.me/+iVePgxkxvQ0yOTBl')
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton('About 😎', callback_data='about')
@@ -88,7 +88,7 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('🔗 Movie Hub', url=f'https://t.me/+Rw47iXFdBF84YTNl')
+            InlineKeyboardButton('🔗 Movie Club', url=f'https://t.me/+iVePgxkxvQ0yOTBl')
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton('About 😎', callback_data='about')
