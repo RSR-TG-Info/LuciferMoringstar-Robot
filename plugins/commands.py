@@ -64,14 +64,14 @@ async def start(client, message):
     if AUTH_CHANNEL and not await is_subscribed(client, message):
         try:
             elif len(message.command) ==2 and message.command[1] in ["subscribe"]:
-        FORCES=["https://telegra.ph/file/b2acb2586995d0e107760.jpg"]
-        invite_link = await bot.create_chat_invite_link(int(FORCES_SUB))
+        AUTH=["https://telegra.ph/file/b2acb2586995d0e107760.jpg"]
+        invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
         button=[[
          InlineKeyboardButton("🔔 SUBSCRIBE 🔔", url=invite_link.invite_link)
          ]]
         reply_markup = InlineKeyboardMarkup(button)
         await message.reply_photo(
-            photo=choice(FORCES),
+            photo=choice(AUTH),
             caption=f"""<i><b>Hello {message.from_user.mention}. \nYou Have <a href="{invite_link.invite_link}">Not Subscribed</a> To <a href="{invite_link.invite_link}">My Update Channel</a>.So you do not get the Files on Inline Mode, Bot Pm and Group</i></b>""",
             reply_markup=reply_markup
         
