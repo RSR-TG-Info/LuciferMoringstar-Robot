@@ -116,7 +116,7 @@ async def next_page(bot, query):
     btn.insert(0,
             [
                 InlineKeyboardButton("🎬 Movie", url="https://t.me/+8X7kGPo_fogzYTRl"),
-                InlineKeyboardButton("Series 🎥", url="https://t.me/+iVePgxkxvQ0yOTBl")
+                InlineKeyboardButton("Series 🎥", url="https://t.me/+Rw47iXFdBF84YTNl")
             ])
 
     btn.insert(0, [
@@ -178,13 +178,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     title = chat.title
                 except:
                     await query.message.edit_text("Make sure I'm present in your group!!", quote=True)
-                    return await query.answer('Piracy Is Crime')
+                    return await query.answer('Connecting Film Lovers')
             else:
                 await query.message.edit_text(
                     "I'm not connected to any groups!\nCheck /connections or connect to any groups",
                     quote=True
                 )
-                return await query.answer('Piracy Is Crime')
+                return await query.answer('Connecting Film Lovers')
 
         elif chat_type in ["group", "supergroup"]:
             grp_id = query.message.chat.id
@@ -245,7 +245,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=keyboard,
             parse_mode="md"
         )
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('Connecting Film Lovers')
     elif "connectcb" in query.data:
         await query.answer()
 
@@ -266,7 +266,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
         else:
             await query.message.edit_text('Some error occurred!!', parse_mode="md")
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('Connecting Film Lovers')
     elif "disconnect" in query.data:
         await query.answer()
 
@@ -289,7 +289,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode="md"
             )
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('Connecting Film Lovers')
     elif "deletecb" in query.data:
         await query.answer()
 
@@ -307,7 +307,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode="md"
             )
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('Connecting Film Lovers')
     elif query.data == "backcb":
         await query.answer()
 
@@ -318,7 +318,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text(
                 "There are no active connections!! Connect to some groups first.",
             )
-            return await query.answer('Piracy Is Crime')
+            return await query.answer('Connecting Film Lovers')
         buttons = []
         for groupid in groupids:
             try:
@@ -447,7 +447,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('🔗 Movie Hub', url=f'https://t.me/+Rw47iXFdBF84YTNl')
+            InlineKeyboardButton('🔗 Movie Club', url=f'https://t.me/+iVePgxkxvQ0yOTBl')
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton('About 😎', callback_data='about')
@@ -459,7 +459,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-        await query.answer('Piracy Is Crime')
+        await query.answer('Connecting Film Lovers')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('🖥️ Connect', callback_data='coct'),
@@ -1124,7 +1124,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
-    await query.answer('Piracy Is Crime')
+    await query.answer('Connecting Film Lovers')
 
 
 async def auto_filter(client, msg, spoll=False):
@@ -1190,10 +1190,10 @@ async def auto_filter(client, msg, spoll=False):
 
     btn.insert(0, [
         InlineKeyboardButton("🎬 Movie", url="https://t.me/+8X7kGPo_fogzYTRl"),
-        InlineKeyboardButton("Series 🎥", url="https://t.me/+iVePgxkxvQ0yOTBl")
+        InlineKeyboardButton("Series 🎥", url="https://t.me/+Rw47iXFdBF84YTNl")
     ])
     btn.insert(0, [
-        InlineKeyboardButton("🔔 Join Our Channel 🔔",url="https://t.me/+tYcc1A2-W0ZhZTFl")
+        InlineKeyboardButton("🔔 Join Our Channel 🔔",url="https://t.me/+5YhAQB1IGNNmNDI9")
     ])
     reply_id = message.reply_to_message.message_id if message.reply_to_message else message.message_id
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
@@ -1231,7 +1231,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>↪️ Requested:</b> {search}\n<b>👥 Requested by:</b> {message.from_user.mention}\n<b>📤 Uploaded To:</b> Movie Hub Server\n<b>🧑‍🔧 Get Support</b> ✔️ <a href='https://t.me/hellodragan'>TG Dragon</a>\n<b>© Powered By:</b> <a href='https://t.me/+Rw47iXFdBF84YTNl'>{message.chat.title}</a>\n\n<b>✍️ Note:</b> <s>This message will be Auto-deleted after 10 minutes to avoid copyright issues.</s>"
+        cap = f"<b>↪️ Requested:</b> {search}\n<b>👥 Requested by:</b> {message.from_user.mention}\n<b>📤 Uploaded To:</b> Movie Club Server\n<b>🧑‍🔧 Get Support</b> ✔️ <a href='https://t.me/hellodragan'>TG Dragon</a>\n<b>© Powered By:</b> <a href='https://t.me/+iVePgxkxvQ0yOTBl'>{message.chat.title}</a>\n\n<b>✍️ Note:</b> <s>This message will be Auto-deleted after 10 minutes to avoid copyright issues.</s>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024], reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
