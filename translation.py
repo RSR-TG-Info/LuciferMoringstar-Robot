@@ -1,9 +1,9 @@
 class LuciferMoringstar(object):
     START_TXT = """<b>Hello 👋 {},</b>
 
-<b>I Am Not Only <a href="https://t.me/MovieHub_Robot">Movie Hub Bot</a> To Assist You But Also Employed At <a href="https://t.me/+Rw47iXFdBF84YTNl">Movie Hub</a> Group By <a href="https://t.me/hellodragan">Dragon</a> So You Can't Get My Service By Adding Me To Your Group So Don't Waste Your Time & Data</b> 😉
+<b>I Am Not Only <a href="https://t.me/Movieclub_Robot">Movie Club Bot</a> To Assist You But Also Employed At <a href="https://t.me/+iVePgxkxvQ0yOTBl">Movie Club</a> Group By <a href="https://t.me/hellodragan">Dragon</a> So You Can't Get My Service By Adding Me To Your Group So Don't Waste Your Time & Data</b> 😉
 
-<b>Better You Click Below & Join <a href="https://t.me/+Rw47iXFdBF84YTNl">Movie Hub</a> & Feel The Experience Of Downloading Unlimited Movies/Series</b> ✅
+<b>Better You Click Below & Join <a href="https://t.me/+iVePgxkxvQ0yOTBl">Movie Club</a> & Feel The Experience Of Downloading Unlimited Movies/Series</b> ✅
 
 <b>For More Information Click ℹ️ Help</b>"""
     
@@ -34,7 +34,7 @@ Source: <a href='https://github.com/josprojects/tgmoviebot'>GitHub - Click here 
 - Filter is the feature were users can set automated replies for a particular keyword and Dingdi will respond whenever a keyword is found the message.</b>
 
 <b>NOTE:
-1. Movie Hub should have admin privillage.
+1. Movie Club should have admin privillage.
 2. Only admins can add filters in a chat.
 3. Alert buttons have a limit of 64 characters.</b>
 
@@ -46,11 +46,11 @@ Source: <a href='https://github.com/josprojects/tgmoviebot'>GitHub - Click here 
 
     BUTTON_TXT = """<b>Buttons
 
-- tgmoviebot support both url and alert inline buttons.</b>
+- Movie Club Bot support both url and alert inline buttons.</b>
 
 <b>NOTE:
 1. Telegram will not allows you to send buttons without any content, so content is mandatory.
-2. Movie Hub supports buttons with any telegram media type.
+2. Movie Club supports buttons with any telegram media type.
 3. Buttons should be properly parsed as markdown format.</b>
 
 <b>URL buttons:</b>
@@ -204,13 +204,13 @@ This module only works for my admins
 <b>Used Storage:</b> <code>{}</code> MiB
 <b>Free Storage:</b> <code>{}</code> MiB"""
 
-    FORCESUB_TXT = """**👋 Hello {mention},**
+    FORCESUB_TXT = """**👋 Hello**
 
 **You Have Not Subscribed To My Channel.** 
 
-**To View The File, Click On 📣 MOVIE TIME UPDATES 📣 Button & Join.** 
+**To View The File, Click On 📣 Join Updates Channel Button & Join.** 
 
-**Then Click On The 🔄 Refresh 🔄 Button To Receive The File ✅**"""
+**Then Click On The 🔄 Try Again Button To Receive The File ✅**"""
 
     MEMES_TXT = """<b>Memes</b>
 
