@@ -505,30 +505,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-    elif query.data == "about":
-        buttons = [[
-            InlineKeyboardButton('🤖 Status', url='https://t.me/+5YhAQB1IGNNmNDI9'),
-            ],[
-            InlineKeyboardButton('🏠 Home', callback_data='start'),
-            InlineKeyboardButton('Close ❎', callback_data='close_data')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.reply_chat_action("Typing")
-        await query.message.edit_text(
-            text="▣ ▢ ▢"
-        )
-        await query.message.edit_text(
-            text="▣ ▣ ▢"
-        )
-        await query.message.edit_text(
-            text="▣ ▣ ▣"
-        )       
-        await query.message.edit_text(
-            text=LuciferMoringstar.ABOUT_TXT.format(temp.B_NAME),
-            disable_web_page_preview=True,
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )
+        await query.answer('Check PM, I have sent files in pm', show_alert=True)
+        elif query.data == "about":
+        await query.answer()
+        
     elif query.data == "torrent":
         buttons = [[
             InlineKeyboardButton('🏠 Home', callback_data='help'),
