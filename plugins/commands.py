@@ -63,6 +63,7 @@ async def start(client, message):
         return
     if AUTH_CHANNEL and not await is_subscribed(client, message):
         try:
+            AUTH=["https://telegra.ph/file/b2acb2586995d0e107760.jpg"]
             invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
         except ChatAdminRequired:
             logger.error("Make sure Bot is admin in Forcesub channel")
@@ -75,7 +76,7 @@ async def start(client, message):
             ]
         ]
 
-        if message.command[1] != "subscribe":
+        if message.command[1] != ["subscribe"]:
             kk, file_id = message.command[1].split("_", 1)
             pre = 'checksubp' if kk == 'filep' else 'checksub' 
             btn.append([InlineKeyboardButton("🔄 Try Again", callback_data=f"{pre}#{file_id}")])
@@ -83,6 +84,8 @@ async def start(client, message):
             chat_id=message.from_user.id,
             text=LuciferMoringstar.FORCESUB_TXT,
             reply_markup=InlineKeyboardMarkup(btn),
+            await message.reply_photo(
+            photo=choice(AUTH),
             parse_mode="markdown"
             )
         return
