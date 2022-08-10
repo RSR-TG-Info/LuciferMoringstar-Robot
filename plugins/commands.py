@@ -63,33 +63,18 @@ async def start(client, message):
         return
     if AUTH_CHANNEL and not await is_subscribed(client, message):
         try:
-            AUTH=["https://telegra.ph/file/b2acb2586995d0e107760.jpg"]
-            invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
-        except ChatAdminRequired:
-            logger.error("Make sure Bot is admin in Forcesub channel")
-            return
-        btn = [
-            [
-                InlineKeyboardButton(
-                    "🔔 Join Updates Channel", url=invite_link.invite_link
-                )
-            ]
-        ]
-
-        if message.command[1] != ["subscribe"]:
-            kk, file_id = message.command[1].split("_", 1)
-            pre = 'checksubp' if kk == 'filep' else 'checksub' 
-            btn.append([InlineKeyboardButton("🔄 Try Again", callback_data=f"{pre}#{file_id}")])
-        await client.send_message[(
-            chat_id==message.from_user.id,
-            text==LuciferMoringstar.FORCESUB_TXT,
-            reply_markup==InlineKeyboardMarkup(btn),
-            await message.reply_photo[(
-            photo==choice(AUTH),
-            parse_mode=="markdown"
-                )
-            ]
-        )]
+            elif len(message.command) ==2 and message.command[1] in ["subscribe"]:
+        FORCES=["https://telegra.ph/file/b2acb2586995d0e107760.jpg"]
+        invite_link = await bot.create_chat_invite_link(int(FORCES_SUB))
+        button=[[
+         InlineKeyboardButton("🔔 SUBSCRIBE 🔔", url=invite_link.invite_link)
+         ]]
+        reply_markup = InlineKeyboardMarkup(button)
+        await message.reply_photo(
+            photo=choice(FORCES),
+            caption=f"""<i><b>Hello {message.from_user.mention}. \nYou Have <a href="{invite_link.invite_link}">Not Subscribed</a> To <a href="{invite_link.invite_link}">My Update Channel</a>.So you do not get the Files on Inline Mode, Bot Pm and Group</i></b>""",
+            reply_markup=reply_markup
+        
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
