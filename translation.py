@@ -11,13 +11,13 @@ class LuciferMoringstar(object):
 
 <i><b>I can Guide You Through All Of <a href="https://t.me/MovieHub_Robot">Movie Hub Bot</a>'s Cool Features & How To Properly Use Them. Use The Buttons Below To Navigate Through All Of The Modules.</i></b>"""
 
-    ABOUT_TXT = """➥ My name: Movie Club Bot 2.0
-➥ Creator: Dragon
+    ABOUT_TXT = """<i><b>➥ My name: {}
+➥ Creator: <a href="https://t.me/hellodragan">Dragon</a>
 ➥ Library: Pyrogram
 ➥ Language: Python 𝟹
 ➥ Data Base: MongoDB
 ➥ Bot Server: Heroku
-➥ Build Status: v2.0.1 [ Beta ]"""
+➥ Build Status: v2.0.1 [ Beta ]</i></b>"""
 
     SOURCE_TXT = """<b>Source:</b>
 IMDb is a Open source project.
