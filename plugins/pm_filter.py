@@ -359,8 +359,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             pass
         elif int(user) != 0 and query.from_user.id != int(user):
             return await query.answer(
-                "All right, but this is not yours.;\nNice Try! But, This Was Not Your Request, Request Yourself;",
-                show_alert=True)
+                "This Is Not Your Message 😔\n\nRequest Your Own ✍\n\n©️ MOVIE CLUB", show_alert=True)
 
         if not files_:
             return await query.answer('No such file exist.')
