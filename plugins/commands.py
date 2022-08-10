@@ -64,7 +64,7 @@ async def start(client, message):
         
     if message.command[1] != "subscribe":
         AUTH=["https://telegra.ph/file/b2acb2586995d0e107760.jpg"]
-        invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
+        invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
         button=[[
          InlineKeyboardButton("🔔 SUBSCRIBE 🔔", url=invite_link.invite_link)
          ]]
