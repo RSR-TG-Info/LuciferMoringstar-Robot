@@ -1206,7 +1206,7 @@ async def auto_filter(client, msg, spoll=False):
                 [InlineKeyboardButton(text="🤖 Check Bot PM 🤖", url=f"https://t.me/{temp.U_NAME}")]
             )
     btn.insert(0, [
-        InlineKeyboardButton(text="ミ★ MOVIE CLUB ★彡", callback_data="rsrq")]
+        InlineKeyboardButton(text="ミ★ MOVIE CLUB ★彡", callback_data="rsrq"))]
     reply_id = message.reply_to_message.message_id if message.reply_to_message else message.message_id
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
