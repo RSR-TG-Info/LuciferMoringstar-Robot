@@ -295,11 +295,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
         return await query.answer('Connecting Film Lovers')
     elif "rsrq" in query.data:
         return await query.answer("""
+ミ★ MOVIE CLUB ★彡
+
 ☞ Storage Of New & Old Movies/Series
 ☞ Available In Many Sizes & Languages
 ☞ Receivable In Various Quality
 
-© MOVIE CLUB
+👑
+『TG』 ཌĐʀᴀɢᴏƝད°ᴵᴰᴹ°ツ
 """, show_alert=True)
     elif "deletecb" in query.data:
         await query.answer()
