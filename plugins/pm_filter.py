@@ -463,7 +463,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔗 Movie Club', url=f'https://t.me/+iVePgxkxvQ0yOTBl')
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('About 😎', callback_data='about')
+            InlineKeyboardButton(text="About 😎", callback_data="crpf")
             ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -472,7 +472,19 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-        await query.answer('Connecting Film Lovers')
+    elif "crpf" in query.data:
+        return await query.answer("""
+ミ★ MOVIE CLUB ★彡
+
+☞ Storage Of New & Old Movies/Series
+☞ Available In Many Sizes & Languages
+☞ Receivable In Various Quality
+
+👑
+『TG』 ཌĐʀᴀɢᴏƝད°ᴵᴰᴹ°ツ
+""", show_alert=True)
+    
+    await query.answer('Connecting Film Lovers')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('🖥️ Connect', callback_data='coct'),
@@ -518,14 +530,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=LuciferMoringstar.HELP_TXT.format(query.from_user.mention),
             reply_markup=reply_markup,
             parse_mode='html'
-        )
-    elif query.data == "about":
-        buttons = [[
-            InlineKeyboardButton('🤖 Status', url='https://t.me/+z2h0W6QBubZlNWU9'),
-            ],[
-            InlineKeyboardButton('🔙 Back', callback_data='start'),
-            InlineKeyboardButton('Close ❎', callback_data='close_data')
-        ]]
+        ) 
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.reply_chat_action("Typing")
         await query.message.edit_text(
@@ -1326,7 +1331,7 @@ async def advantage_spell_chok(msg):
         k = await msg.reply(f"Hey, Your word <b>{search}</b> is No Movie/Series Related to the Given Word Was Found 🥺\n\n<s>Please Go to Google and Confirm the Correct Spelling 🥺🙏</s>", reply_markup=button)
         await asyncio.sleep(60)
         await k.delete()
-        return
+        return 
     SPELL_CHECK[msg.message_id] = movielist
     btn = [[
         InlineKeyboardButton(
